@@ -1,0 +1,7 @@
+{
+  "epochs": 3,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "test_loss": 0.045751807736277364,
+  "test_accuracy_percent": 98.46
+}
