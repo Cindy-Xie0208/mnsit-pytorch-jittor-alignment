@@ -123,6 +123,8 @@ mnist-pytorch-jittor-alignment/
 │
 └── README.md
 
+
+```markdown
 ## 8. 如何复现实验（供仓库使用者参考）
 
 > 本项目的实验结果已经生成并保存在 `results` 文件夹中，
@@ -139,4 +141,4 @@ mnist-pytorch-jittor-alignment/
 `pip install jittor==1.3.11.0`
 
 在 Kaggle 当前环境中，安装完成后需要重启 Session。重启后跳过安装
-单元格，从 Jittor 环境检查单元格开始依次运行。
+单元格，从 Jittor 环境检查单元格开始依次运行
