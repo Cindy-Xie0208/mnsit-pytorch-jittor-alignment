@@ -1,16 +1,3 @@
-## PyTorch 与 Jittor 实验对齐
-
-本项目分别使用 PyTorch 和 Jittor 实现相同的 MNIST CNN。
-两个版本采用相同的数据集、模型结构和训练超参数。
-
-| Framework | Epochs | Batch Size | Learning Rate | Test Loss | Test Accuracy |
-|---|---:|---:|---:|---:|---:|
-| PyTorch | 3 | 64 | 0.001 | 0.04575 | 98.46% |
-| Jittor | 3 | 64 | 0.001 | 0.04974 | 98.22% |
-
-两个框架的测试准确率相差 0.24 个百分点，实验结果基本对齐。
-由于没有固定随机种子，模型初始化和数据打乱顺序不同，因此结果存在轻微波动。
-
 # MNIST CNN：PyTorch 与 Jittor 对齐实验
 
 ## 1. 项目简介
@@ -122,9 +109,8 @@ mnist-pytorch-jittor-alignment/
 │       └── loss_curve.png
 │
 └── README.md
+```
 
-
-```markdown
 ## 8. 如何复现实验（供仓库使用者参考）
 
 > 本项目的实验结果已经生成并保存在 `results` 文件夹中，
@@ -141,4 +127,10 @@ mnist-pytorch-jittor-alignment/
 `pip install jittor==1.3.11.0`
 
 在 Kaggle 当前环境中，安装完成后需要重启 Session。重启后跳过安装
-单元格，从 Jittor 环境检查单元格开始依次运行
+单元格，从 Jittor 环境检查单元格开始依次运行。
+
+## 9. 实验结论
+
+本实验使用 Jittor 成功实现了与 PyTorch 结构一致的 CNN，并在 MNIST
+测试集上取得 98.22% 的准确率。其结果与 PyTorch 版本的 98.46%
+基本一致，验证了模型迁移和训练流程的正确性。
